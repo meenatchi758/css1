@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Flexbox Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background: #3498db;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #2c3e50;
+            padding: 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 15px;
+        }
+
+        .navbar a:hover {
+            background: #1abc9c;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            flex: 1 1 calc(50% - 15px);
+            flex-wrap: wrap;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            justify-content: center;
+            font-weight: bold;
+            background: lightblue;
+            text-align: center;
+            padding: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .section-1 {
+
+            background-color: blue;
+
+
+        }
+
+        .section-2 {
+            background-color: #444;
+
+
+        }
+
+        .section-3 {
+            background-color: lightgreen;
+
+
+        }
+
+        .section-4 {
+            background-color: purple;
+
+
+        }
+
+        .section-5 {
+            background-color: plum;
+
+
+        }
+
+        .section-6 {
+            background-color: lightblue;
+
+
+        }
+        @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .section {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .header {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .main {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .section {
+        font-size: 16px;
+        padding: 20px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">Complex Flexbox Layout</div>
+
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <main class="main">
+            <section class="section section-1">College</section>
+            <section class="section section-2">School</section>
+            <section class="section section-3">Hospital</section>
+            <section class="section section-4">Restaurant</section>
+            <section class="section section-5">Saravana Stores</section>
+            <section class="section section-6">Pothys</section>
+        </main>
+        </div>
+
+</body>
+
+</html>
